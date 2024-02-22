@@ -151,6 +151,10 @@
           &__title{
             font-size: 16px;
             max-width: 100%;
+
+            &:hover{
+              text-decoration: underline;
+            }
           }
           &__text{
             font-size: 14px;
