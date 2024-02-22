@@ -1,9 +1,58 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'section';
+@use 'footer';
+
+@font-face {
+  font-family: Netflix;
+  src: url('../../assets/NetflixSans-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Netflix;
+  src: url('../../assets/NetflixSans-Bold.woff2');
+  font-weight: 700;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Netflix';
 }
 
+
 body {
-  background-color: black;
+  color: variaveis.$textColor;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  max-width: 1360px;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: variaveis.$textColor;
+  }
+
+  .button{
+    padding: 9px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 2px;
+
+    &_redButton{
+      text-transform: uppercase;
+      box-shadow: 0 0 0 .085em #85050b;
+      background: variaveis.$bgRedButton;
+    }
+  }
+
+  ul {
+    li {
+      list-style: none;
+    }
+  }
 }

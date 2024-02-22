@@ -1,0 +1,182 @@
+@use 'variaveis';
+
+.section {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 10px 50px;
+
+  &__header{
+    &__title{
+      font-size: 30px;
+    }
+
+    &__subtitle{
+      font-size: 20px;
+      margin: 15px 0 10px 9px;
+      padding-left: 15px;
+      color: variaveis.$spanTextColor;
+      border-left: 1px solid variaveis.$spanTextColor;
+    }
+  }
+
+  .section__select {
+    margin-top: 17px;
+
+    select {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      padding: 7px 30px 7px 0px;
+      color: variaveis.$textColor;
+      margin-bottom: 10px;
+
+      &:focus {
+        background-color: variaveis.$bgColor;
+      }
+    }
+
+    &__select_arrow { /* Estilo da seta */
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%); /* Centraliza verticalmente */
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid red; /* Cor da seta */
+      pointer-events: none; /* Evita que a seta seja clicável */
+    }
+  }
+
+  &__content {
+    max-width: 1360px;
+    width: 100%;
+    margin-top: 20px;
+
+    &__list {
+      max-width: 1360px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      gap: .5%;
+      padding: 0;
+
+
+      &__item {
+        .aditional_video{
+          display: flex;
+          flex-direction: column;
+          background-color: transparent;
+          color: variaveis.$textColor;
+          border: none;
+          padding-right: 16px;
+          padding-bottom: 16px;
+          font-size: 16px;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+          }
+          }
+
+          .additional-video-play-icon {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            margin-top: -50px;
+          }
+
+          .additional_video_title{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 90% 10%;
+
+            .episode_title {
+              font-size: 16px;
+              text-align: initial;
+              align-items: center;
+              margin: 0;
+            }
+
+            .episode_runtime {
+              display: flex;
+              flex-wrap: wrap;
+              color: variaveis.$spanTextColor;
+              font-size: 16px;
+            }
+          }
+
+          .additional_video_sinopse{
+            color: variaveis.$spanTextColor;
+            padding: 12px 0;
+            font-size: 12px;
+            text-align: initial;
+          }
+        }
+      }
+
+    .more_details {
+      margin: 25px auto;
+      &__list{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 33.3%);
+
+        &__item {
+          display: block;
+          font-size: 16px;
+
+          &__title {
+            color: variaveis.$spanTextColor;
+            margin: 0 0 5px;
+          }
+
+          &__text {
+            color: variaveis.$textColor;
+          }
+        }
+      }
+    }
+
+    .coming_soon{
+      &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 33.333%);
+
+        &__item{
+          padding-right: 24px;
+          margin: 6px;
+
+          &__title{
+            font-size: 16px;
+            max-width: 100%;
+          }
+          &__text{
+            font-size: 14px;
+            color: variaveis.$spanTextColor;
+          }
+        }
+      }
+      }
+
+    .tudum_promo{
+      display: grid;
+      grid-template-columns: repeat(3, 33.3%);
+      padding-left: 16px;
+
+      &__text{
+        color: variaveis.$spanTextColor;
+        font-size: 14px;
+
+        a{
+          color: variaveis.$spanTextColor;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
